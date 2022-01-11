@@ -56,3 +56,7 @@ p {
 rect {
     fill: var(--primary-orange);
 }
+
+circle {
+    fill: var(--primary-blue);
+}
