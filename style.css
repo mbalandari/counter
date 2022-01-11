@@ -27,3 +27,15 @@ h1 {
     font-size: 24px;
     font-weight: 700;
 }
+
+h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--secondary-blue);
+    text-transform: uppercase;
+    margin-top: 24px;
+}
+
+p {
+    font-size: 24px;
+}
