@@ -6,7 +6,7 @@ html { font-family: 'Inter', sans-serif; }
 
 :root {
     --background-main: #edf4f7;
-    --background-side: hsl(200, 37%, 97%);
+    --background-side: #f4f8fa;
     --primary-blue: #32444d;
     --secondary-blue: #b3c3cc;
     --primary-orange: #ff6719;
@@ -21,6 +21,19 @@ body {
 
     background-color: var(--background-main);
     color: var(--primary-blue);
+
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: var(--background-side);
+    padding: 48px;
+}
+
+main {
+    padding: 48px;
 }
 
 h1 {
@@ -38,4 +51,8 @@ h2 {
 
 p {
     font-size: 24px;
+}
+
+rect {
+    fill: var(--primary-orange);
 }
