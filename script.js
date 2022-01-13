@@ -33,6 +33,6 @@ monthSvg
     .data(monthData)
     .enter()
     .append("circle")
-    .attr("cx", (d, i) => { return i * 20 + 20 })
-    .attr("cy", (d, i) => { return 40 })
+    .attr("cx", (d, i) => { return (i % 7) * 120 + 60 })
+    .attr("cy", (d, i) => { return Math.floor(i / 7) * 100 + 60 })
     .attr("r", (d, i) => { return 5 })
