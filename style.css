@@ -58,7 +58,7 @@ rect {
 }
 
 circle {
-    fill: var(--primary-blue);
+    /* fill: var(--primary-blue); */
 }
 
 text {

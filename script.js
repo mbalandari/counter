@@ -32,6 +32,10 @@ const raduisScale = d3.scaleSqrt()
     .domain([0, 30000])
     .range([0, 50])
 
+const colorScale = d3.scaleSqrt()
+    .domain([0, 30000])
+    .range(["blue", "red"])
+
 monthSvg
     .selectAll("circle")
     .data(monthData)
@@ -40,3 +44,4 @@ monthSvg
     .attr("cx", (d, i) => { return (i % 7) * 120 + 60 })
     .attr("cy", (d, i) => { return Math.floor(i / 7) * 100 + 60 })
     .attr("r", (d, i) => { return raduisScale(d) })
+    .attr("fill", (d, i) => { return colorScale(d) })
