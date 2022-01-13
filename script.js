@@ -28,6 +28,10 @@ todaySvg
 // --- Month SVG ---
 const monthSvg = d3.select("svg.month");
 
+const raduisScale = d3.scaleSqrt()
+    .domain([0, 30000])
+    .range([0, 50])
+
 monthSvg
     .selectAll("circle")
     .data(monthData)
@@ -35,4 +39,4 @@ monthSvg
     .append("circle")
     .attr("cx", (d, i) => { return (i % 7) * 120 + 60 })
     .attr("cy", (d, i) => { return Math.floor(i / 7) * 100 + 60 })
-    .attr("r", (d, i) => { return 5 })
+    .attr("r", (d, i) => { return raduisScale(d) })
