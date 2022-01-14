@@ -42,4 +42,6 @@ monthSvg
     .attr("r", 0)
     .transition()
     .duration(1000)
+    .delay((d, i) => { return i * 20 + 200 })
+    .ease(d3.easeCubicIn)
     .attr("r", (d, i) => { return raduisScale(d) })
